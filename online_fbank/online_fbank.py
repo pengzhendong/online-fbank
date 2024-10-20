@@ -52,7 +52,7 @@ class OnlineFbank(knf.OnlineFbank):
     def get_lfr_frames(self, window_size=7, window_shift=6, neg_mean=0, inv_stddev=1):
         num_lfr_frames = (self.num_frames_ready() - window_size) // window_shift + 1
         if num_lfr_frames <= 0:
-            return None
+            return np.array([])
 
         num_frames = window_size + (num_lfr_frames - 1) * window_shift
         frames = self.get_frames(num_frames)
