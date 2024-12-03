@@ -13,3 +13,5 @@
 # limitations under the License.
 
 from .online_fbank import OnlineFbank
+
+__all__ = ["OnlineFbank"]
